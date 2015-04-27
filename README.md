@@ -10,4 +10,4 @@ Install via Cocoapods by adding to your project's Podfile:
 pod 'InnerShadowView'
 ```
 
-OR you can just copy-paste UIView+InnerShadow{h,m} files manually.
+OR you can just copy-paste "UIView+InnerShadow{h,m}" files manually.
