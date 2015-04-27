@@ -1,2 +1,2 @@
 # InnerShadowView
-UIView category for adding inset shadows
+UIView category for adding the inset shadows.
