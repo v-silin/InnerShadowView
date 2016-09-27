@@ -5,7 +5,7 @@ Does not intend to work with custom-shaped views (or with corner radius).
 
 # Installation
 
-Install via Cocoapods by adding to your project's Podfile:
+Install via CocoaPods by adding to your project's Podfile:
 ```
 pod 'InnerShadowView'
 ```
