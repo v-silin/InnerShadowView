@@ -6,6 +6,7 @@
 //
 
 #import "UIView+InnerShadow.h"
+#import <UIKit/UIKit.h>
 
 static inline void addShadow(UIView* toView, CGPoint start, CGPoint end, CGRect frame, UIColor* shadowColor)
 {
@@ -38,7 +39,7 @@ static inline void addShadow(UIView* toView, CGPoint start, CGPoint end, CGRect 
     shadowView.backgroundColor = [UIColor clearColor];
     [self addSubview:shadowView];
     
-    UIColor* shadowColor = [UIColor colorWithWhite:0.0f alpha:0.7f];
+    UIColor* shadowColor = [UIColor colorWithWhite:0.0f alpha:0.2f];
     
     // Draw top shadow, if needed
     if (SHADOW_TOP & directions)
@@ -78,6 +79,24 @@ static inline void addShadow(UIView* toView, CGPoint start, CGPoint end, CGRect 
                  , CGPointMake(1.0, 0.5)
                  , CGRectMake(0, 0, radius, self.bounds.size.height)
                  , shadowColor);
+    }
+    
+    if (SHADOW_TOP_LEFT & directions)
+    {
+        addShadow( shadowView
+                  , CGPointMake(0.0, 0.0)
+                  , CGPointMake(0.6, 0.5)
+                  , CGRectMake(0, 0, self.bounds.size.width, radius)
+                  , shadowColor);
+    }
+    
+    if (SHADOW_TOP_RIGHT & directions)
+    {
+        addShadow( shadowView
+                  , CGPointMake(1.0, 0.0)
+                  , CGPointMake(0.4, 0.5)
+                  , CGRectMake(0, 0, self.bounds.size.width, radius)
+                  , shadowColor);
     }
 }
 
